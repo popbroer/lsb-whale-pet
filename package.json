@@ -1,0 +1,47 @@
+{
+  "name": "deepseek-whale-pet",
+  "version": "0.1.0",
+  "description": "DeepSeek 鲸鱼娘桌面宠物 · 接入 cc-switch",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:card": "electron . --open-card",
+    "test:switch": "node --experimental-sqlite scripts/test-switch.js",
+    "test": "node scripts/test-grow.js && node scripts/test-meta.js && node scripts/test-gameplay.js && node scripts/test-live.js && node scripts/test-reply.js && node scripts/test-skins.js && node scripts/test-bills.js && node scripts/test-wbchat.js && node --experimental-sqlite scripts/test-switch.js",
+    "test:grow": "node scripts/test-grow.js",
+    "start:feed": "electron . --feed",
+    "test:live": "node scripts/test-live.js",
+    "test:meta": "node scripts/test-meta.js",
+    "test:gameplay": "node scripts/test-gameplay.js",
+    "test:reply": "node scripts/test-reply.js",
+    "test:wb": "node scripts/test-wbfeed.js",
+    "test:skins": "node scripts/test-skins.js",
+    "test:bills": "node scripts/test-bills.js",
+    "start:bills": "electron . --bills",
+    "start:profile": "electron . --profile",
+    "test:wbchat": "node scripts/test-wbchat.js"
+  },
+  "devDependencies": {
+    "electron": "^45.3.1"
+  },
+  "license": "MIT",
+  "private": false,
+  "author": "刘升波",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/popbroer/lsb-whale-pet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/popbroer/lsb-whale-pet/issues"
+  },
+  "homepage": "https://github.com/popbroer/lsb-whale-pet#readme",
+  "keywords": [
+    "desktop-pet",
+    "electron",
+    "cc-switch",
+    "codex",
+    "workbuddy",
+    "claude-code",
+    "token-usage"
+  ]
+}

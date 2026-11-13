@@ -1,0 +1,190 @@
+{
+  "id": "claude",
+  "name": "Claude 娘",
+  "subtitle": "铜橙长发 · 抱书的大小姐",
+  "accent": "#e8a33d",
+  "accentDeep": "#b5651d",
+  "accent2": "#f0c169",
+  "mode": "frames",
+  "size": {
+    "w": 195,
+    "h": 208
+  },
+  "tracks": {
+    "idle": {
+      "frames": [
+        "idle.webp",
+        "idle.webp",
+        "idle-blink.webp",
+        "idle-2.webp",
+        "idle-2.webp",
+        "idle-3.webp"
+      ],
+      "dur": [
+        800,
+        820,
+        130,
+        820,
+        820,
+        900
+      ]
+    },
+    "running": {
+      "frames": [
+        "writing.webp"
+      ],
+      "dur": [
+        1000
+      ]
+    },
+    "failed": {
+      "frames": [
+        "oops.webp",
+        "sorry.webp"
+      ],
+      "dur": [
+        1100,
+        1500
+      ]
+    },
+    "waiting": {
+      "frames": [
+        "tired.webp",
+        "yawn.webp"
+      ],
+      "dur": [
+        1500,
+        1300
+      ]
+    },
+    "sleep": {
+      "frames": [
+        "sleeping-2.webp",
+        "sleeping-2.webp",
+        "yawn.webp"
+      ],
+      "dur": [
+        2200,
+        1400,
+        1600
+      ]
+    },
+    "waving": {
+      "frames": [
+        "pat-2.webp",
+        "happy-2.webp"
+      ],
+      "dur": [
+        620,
+        900
+      ]
+    },
+    "jumping": {
+      "frames": [
+        "happy-2.webp",
+        "proud.webp",
+        "happy-2.webp"
+      ],
+      "dur": [
+        520,
+        760,
+        520
+      ]
+    },
+    "review": {
+      "frames": [
+        "searching.webp",
+        "thinking.webp"
+      ],
+      "dur": [
+        1100,
+        1100
+      ]
+    },
+    "thinking": {
+      "frames": [
+        "thinking.webp",
+        "thinking-2.webp"
+      ],
+      "dur": [
+        1200,
+        1200
+      ]
+    },
+    "clawd": {
+      "frames": [
+        "clawd.webp"
+      ],
+      "dur": [
+        1400
+      ]
+    }
+  },
+  "greet": {
+    "dawn": "greet_dawn.webp",
+    "morning": "greet_morning.webp",
+    "noon": "greet_noon.webp",
+    "afternoon": "greet_afternoon.webp",
+    "evening": "greet_evening.webp",
+    "night": "greet_night.webp"
+  },
+  "lines": {
+    "idle": [
+      "在呢。",
+      "有什么要做的吗？",
+      "……（翻了一页）",
+      "今天也加油。"
+    ],
+    "working": [
+      "在写了在写了。",
+      "动笔中…",
+      "这段我改一下。"
+    ],
+    "failed": [
+      "诶？出错了…",
+      "呜，没成功。",
+      "我再试试。"
+    ],
+    "worried": [
+      "有点不对劲…",
+      "我盯一下这条通道。"
+    ],
+    "sleep": [
+      "zZz…",
+      "……呼……",
+      "zZ（梦到在写代码）"
+    ],
+    "switch": [
+      "换好啦～",
+      "通道换过了，锅我背。"
+    ]
+  },
+  "greetings": {
+    "dawn": [
+      "天快亮了呢……我还醒着。",
+      "嗯……我就在这儿。"
+    ],
+    "morning": [
+      "早上好。我泡了茶。",
+      "早呀，今天也一起吧。"
+    ],
+    "noon": [
+      "中午啦，我也去吃点东西。",
+      "午饭吃什么呢……"
+    ],
+    "afternoon": [
+      "下午茶时间～",
+      "下午的阳光好舒服。"
+    ],
+    "evening": [
+      "晚上好，今天辛苦啦。",
+      "晚上好，我点上灯了。"
+    ],
+    "night": [
+      "夜里好安静呀。",
+      "这么晚了，我陪着你。"
+    ]
+  },
+  "license": "立绘 CC BY-NC-SA 4.0 · CrossPet · 见 assets/skins/claude/LICENSE.md",
+  "avatar": "avatar.webp"
+}

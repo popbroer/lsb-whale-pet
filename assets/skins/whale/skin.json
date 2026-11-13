@@ -1,0 +1,136 @@
+{
+  "id": "whale",
+  "name": "鲸鱼娘 · 溟月",
+  "subtitle": "深蓝女仆鲸鱼娘",
+  "accent": "#4d6bfe",
+  "accentDeep": "#2f4ddb",
+  "accent2": "#38bdf8",
+  "mode": "sheet",
+  "sheet": "../../whale-girl-refined.webp",
+  "grid": {
+    "cols": 8,
+    "rows": 9,
+    "cw": 192,
+    "ch": 208
+  },
+  "size": {
+    "w": 192,
+    "h": 208
+  },
+  "rows": {
+    "idle": 0,
+    "running-right": 1,
+    "running-left": 2,
+    "waving": 3,
+    "jumping": 4,
+    "failed": 5,
+    "waiting": 6,
+    "running": 7,
+    "review": 8
+  },
+  "tracks": {
+    "idle": {
+      "frames": 6,
+      "dur": [
+        500,
+        500,
+        600,
+        500,
+        500,
+        600
+      ]
+    },
+    "running-right": {
+      "frames": 8,
+      "dur": [
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        400
+      ]
+    },
+    "running-left": {
+      "frames": 8,
+      "dur": [
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        300,
+        400
+      ]
+    },
+    "waving": {
+      "frames": 4,
+      "dur": [
+        450,
+        450,
+        450,
+        450
+      ]
+    },
+    "jumping": {
+      "frames": 5,
+      "dur": [
+        400,
+        400,
+        400,
+        450,
+        450
+      ]
+    },
+    "failed": {
+      "frames": 8,
+      "dur": [
+        550,
+        550,
+        550,
+        600,
+        650,
+        700,
+        550,
+        550
+      ]
+    },
+    "waiting": {
+      "frames": 6,
+      "dur": [
+        550,
+        550,
+        600,
+        550,
+        550,
+        600
+      ]
+    },
+    "running": {
+      "frames": 6,
+      "dur": [
+        330,
+        330,
+        330,
+        330,
+        330,
+        400
+      ]
+    },
+    "review": {
+      "frames": 6,
+      "dur": [
+        650,
+        650,
+        650,
+        650,
+        650,
+        650
+      ]
+    }
+  },
+  "license": "美术 CC BY-NC-SA 4.0 · 见 THIRD_PARTY_NOTICES.md"
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'" />
+    <title>鲸鱼娘</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="stage">
+      <section id="card" class="hit" aria-hidden="true">
+        <header class="card-head">
+          <div class="who">
+            <div class="avatar" aria-hidden="true">
+              <img id="pet-avatar" src="../assets/avatar.png" alt="" />
+            </div>
+            <div class="who-text">
+              <b id="pet-name">鲸鱼娘</b>
+              <small id="level-text">Lv.1 · 白米饭票</small>
+            </div>
+          </div>
+          <button id="btn-bills" class="icon-btn" title="账单：缓存与会话">📊</button>
+          <button id="btn-profile" class="icon-btn" title="成就与收藏">🏆</button>
+          <button id="btn-close" class="icon-btn" title="收起">✕</button>
+        </header>
+
+        <div class="grow">
+          <span id="rank-name" class="rank">幼鲸</span>
+          <span id="rank-stars" class="stars">★</span>
+          <div class="bar"><i id="rank-bar"></i></div>
+          <button id="btn-feed" class="feed" title="喂一条小鱼干 · 亲密度 +5">
+            <span class="fish">🐟</span><b id="treat-count">0</b>
+          </button>
+        </div>
+
+        <div class="intake">
+          <span class="bowl" title="一碗白饭 = 3000 token">🍚 <b id="bowls">0</b> 碗</span>
+          <span class="intake-tokens" id="intake-tokens">0 tokens</span>
+          <span class="spark" id="spark" title="近 7 天饭量"></span>
+          <span class="sat" title="饱食度"><i id="sat-bar"></i></span>
+          <span class="sat-val" id="sat-val">0%</span>
+        </div>
+
+        <div id="apps" class="apps"></div>
+
+        <div id="bills" class="apps bills hidden">
+          <div class="bill-cache">
+            <div class="bc-main">
+              <b id="bc-hit">--%</b>
+              <span class="bc-label">缓存命中率（累计）</span>
+            </div>
+            <div class="bc-side">
+              <span>省下 <b id="bc-saved">0</b> 碗</span>
+              <span class="bc-sub" id="bc-sub">今日 --%</span>
+            </div>
+          </div>
+          <div class="psec">最烧 token 的会话 <span class="pcount" id="bs-count"></span></div>
+          <div id="bs-list" class="bs-list"></div>
+        </div>
+
+        <div id="profile" class="apps profile hidden">
+          <div class="pstats">
+            <span>🍚 累计 <b id="p-life">0</b></span>
+            <span>✈️ <b id="p-trips">0</b> 次旅行</span>
+            <span>🏆 <b id="p-ach">0/16</b></span>
+          </div>
+          <div class="psec">成就</div>
+          <div id="ach-list" class="ach-list"></div>
+          <div class="psec">纪念品 <span id="col-count" class="pcount">0</span></div>
+          <div id="col-list" class="col-list"></div>
+          <div class="psec">食谱图鉴 <span id="dish-count" class="pcount">0</span></div>
+          <div id="dish-list" class="dish-list"></div>
+        </div>
+
+        <footer class="card-foot">
+          <div class="stats" id="stats">今日 0 次 · 0 tokens · $0.00</div>
+          <div class="acts">
+            <button id="btn-open-cc" class="btn">打开 CC Switch</button>
+            <button id="btn-more" class="icon-btn" title="更多">⋯</button>
+          </div>
+        </footer>
+      </section>
+
+      <section id="live" aria-live="polite">
+        <header class="live-head">
+          <span class="live-dot"></span>
+          <span id="live-title">Codex 正在思考</span>
+          <span id="live-time">0:00</span>
+        </header>
+        <p id="live-text"></p>
+        <footer class="live-foot">
+          <span id="live-chip" class="live-chip hidden"></span>
+        </footer>
+      </section>
+
+      <div id="bubble" class="hit" aria-live="polite"><span id="bubble-text"></span></div>
+
+      <section id="postcard" class="hit">
+        <header class="pc-head">
+          <span class="pc-stamp">✉️</span>
+          <b id="pc-title">旅行明信片</b>
+          <span id="pc-close" class="pc-x">✕</span>
+        </header>
+        <div class="pc-dest" id="pc-dest"></div>
+        <p class="pc-text" id="pc-text"></p>
+        <div class="pc-loot" id="pc-loot"></div>
+      </section>
+
+      <section id="replybox" class="hit">
+        <header class="rb-head">
+          <b>最近回复</b>
+          <small id="reply-time"></small>
+          <span id="reply-close" class="rb-x">✕</span>
+        </header>
+        <div id="reply-text" class="rb-text"></div>
+        <footer class="rb-foot">
+          <button id="reply-copy" class="btn">复制全文</button>
+        </footer>
+      </section>
+
+      <div id="trip" class="hit hidden">
+        <div class="t-emoji" id="trip-emoji">🌊</div>
+        <div class="t-meta">
+          <b id="trip-name">旅行中</b>
+          <small id="trip-time">--:--</small>
+        </div>
+      </div>
+
+      <div id="pet-wrap" class="hit" title="点我看看通道状态">
+        <div id="pet">
+          <div id="pet-img"><img id="pet-frame" class="hidden" alt="" draggable="false" /></div>
+        </div>
+        <div id="dot" class="dot hidden"></div>
+        <div id="shadow"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

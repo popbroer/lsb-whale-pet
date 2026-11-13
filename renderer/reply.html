@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'"
+    />
+    <title>回复 Codex</title>
+    <link rel="stylesheet" href="reply.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <span class="logo">🐋</span>
+      <div class="bar-title">
+        <b>回复 Codex</b>
+        <small id="bar-sub">正在读取会话…</small>
+      </div>
+      <button id="close" class="x" title="关闭">✕</button>
+    </header>
+
+    <section class="panel sessions-panel">
+      <div class="sec-head">最近会话 <span id="sessions-count" class="count"></span></div>
+      <div id="sessions" class="sessions"></div>
+    </section>
+
+    <section class="panel ctx-panel">
+      <div class="sec-head">上下文 <span id="ctx-meta" class="meta"></span></div>
+      <div class="ctx">
+        <div class="ctx-item">
+          <span class="tag">你上次说</span>
+          <p id="ctx-user">—</p>
+        </div>
+        <div class="ctx-item">
+          <span class="tag">它最后回复</span>
+          <p id="ctx-assistant">—</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel compose-panel">
+      <textarea id="input" placeholder="接着这个会话说点什么…（Ctrl+Enter 发送）"></textarea>
+      <div class="foot">
+        <span id="status" class="status"></span>
+        <button id="send" class="primary">发送</button>
+      </div>
+      <p class="sync-hint">发送后消息会写进会话文件；Codex 界面不会自动刷新——切到别的会话再切回来就能看到。</p>
+    </section>
+
+    <script src="reply.js"></script>
+  </body>
+</html>
