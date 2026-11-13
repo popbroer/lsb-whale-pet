@@ -2,7 +2,7 @@
 
 一只常驻桌面右下角的鲸鱼娘，盯着你的 **cc-switch**：当前用的是哪个供应商、今天烧了多少 token、哪条通道在报错，都由她来播报；授权之后还能让她帮你一键切供应商。
 
-- 形象：开源鲸鱼娘「溟月」衍生形象（精致版精灵图集），非官方同人，署名与许可见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
+- 形象：开源鲸鱼娘「溟月」衍生形象（精致版精灵图集），非官方同人，署名与许可见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 与 [LICENSE-ASSETS.md](LICENSE-ASSETS.md)
 - 技术：Electron 45（内置 Node 24，`node:sqlite` 直读 cc-switch 数据库，无原生依赖）
 - 平台：Windows（当前版本；macOS/Linux 只需改 `CC_EXE` 路径与一个 `setVisibleOnAllWorkspaces` 参数即可）
 
@@ -563,7 +563,9 @@ deepseek-whale-pet/
 │  ├─ test-wbfeed.js      WorkBuddy 审计流映射（12 条断言）
 │  └─ test-live.js        实时字幕解析测试（17 条断言）
 ├─ 启动鲸鱼娘.vbs          静默启动（推荐双击）
-└─ 启动（调试）.bat        带控制台启动，方便看报错
+├─ 启动（调试）.bat        带控制台启动，方便看报错
+├─ LICENSE               代码 MIT
+└─ LICENSE-ASSETS.md     立绘 CC BY-NC-SA 4.0
 ```
 
 ### 图集约定
@@ -596,3 +598,12 @@ deepseek-whale-pet/
 - 会话标题依赖 Codex 的 `state_5.sqlite`，Codex 升级改表结构时这里需要跟着改。
 - 「回复当前任务」本质是**新起一个 codex 进程续写同一会话**。如果原窗口正开着同一会话，两边会同时写 rollout，可能产生重复/错乱的对话记录；建议原窗口空闲时再用，或干脆只在宠物里操作。
 - 回复走的是 `codex exec`，所以是**纯文本往返**：看不到它在你原窗口里已经渲染的富内容，也不会同步图片附件。
+
+---
+
+## 许可
+
+- **代码**（`*.js` / `*.html` / `*.css` / 脚本）：[MIT](LICENSE)，随便改、随便发，保留版权声明即可。
+- **立绘与精灵图集**（`assets/` 下的 `*.webp` / `*.png` / `*.gif`）：[CC BY-NC-SA 4.0](LICENSE-ASSETS.md)，署名 · 非商业 · 相同方式共享。**不能拿去卖**；要商用请换成自己的图。
+- 逐项来源与上游许可原文：[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
